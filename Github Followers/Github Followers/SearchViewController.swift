@@ -82,7 +82,7 @@ final class SearchViewController: UIViewController {
     
     @objc private func pushFollowerListVC(){
         guard isUsernameEntered else {
-            print("no username")
+            presentGFAlertOnMainThread(title: "Empty Username", message: "Please enter a username. We need to know who to look for you", buttonTitle: "Ok")
             return
         }
         let followerListVC = FollowerViewController()
