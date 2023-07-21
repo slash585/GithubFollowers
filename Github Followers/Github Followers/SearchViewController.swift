@@ -29,6 +29,7 @@ final class SearchViewController: UIViewController {
         configureLogoImageView()
         configureTextField()
         configureCallToActionButton()
+        createDismissKeyboardTapGesture()
     }
     
     private func configureLogoImageView(){
@@ -66,6 +67,11 @@ final class SearchViewController: UIViewController {
             callToActionButton.heightAnchor.constraint(equalToConstant: 50)
             
         ])
+    }
+    
+    private func createDismissKeyboardTapGesture(){
+        let tap = UITapGestureRecognizer(target: view.self, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
     }
     
 }
