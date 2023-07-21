@@ -16,6 +16,8 @@
 		56211D882A6B146E001EB769 /* Github_FollowersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211D872A6B146E001EB769 /* Github_FollowersTests.swift */; };
 		56211D922A6B146E001EB769 /* Github_FollowersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211D912A6B146E001EB769 /* Github_FollowersUITests.swift */; };
 		56211D942A6B146E001EB769 /* Github_FollowersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211D932A6B146E001EB769 /* Github_FollowersUITestsLaunchTests.swift */; };
+		56211DA12A6B18D2001EB769 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211DA02A6B18D2001EB769 /* SearchViewController.swift */; };
+		56211DA32A6B1904001EB769 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211DA22A6B1904001EB769 /* FavoritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		56211D8D2A6B146E001EB769 /* Github FollowersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Github FollowersUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56211D912A6B146E001EB769 /* Github_FollowersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_FollowersUITests.swift; sourceTree = "<group>"; };
 		56211D932A6B146E001EB769 /* Github_FollowersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_FollowersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		56211DA02A6B18D2001EB769 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		56211DA22A6B1904001EB769 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				56211D792A6B146E001EB769 /* Assets.xcassets */,
 				56211D7B2A6B146E001EB769 /* LaunchScreen.storyboard */,
 				56211D7E2A6B146E001EB769 /* Info.plist */,
+				56211DA02A6B18D2001EB769 /* SearchViewController.swift */,
+				56211DA22A6B1904001EB769 /* FavoritesViewController.swift */,
 			);
 			path = "Github Followers";
 			sourceTree = "<group>";
@@ -260,6 +266,8 @@
 			files = (
 				56211D752A6B146D001EB769 /* ViewController.swift in Sources */,
 				56211D712A6B146D001EB769 /* AppDelegate.swift in Sources */,
+				56211DA12A6B18D2001EB769 /* SearchViewController.swift in Sources */,
+				56211DA32A6B1904001EB769 /* FavoritesViewController.swift in Sources */,
 				56211D732A6B146D001EB769 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
