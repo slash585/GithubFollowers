@@ -14,27 +14,27 @@ class NetworkManager {
     
     private init() {}
     
-    func getFollowers(for username: String, page: Int, complated: @escaping([Follower]?, String?) -> Void){
+    func getFollowers(for username: String, page: Int, complated: @escaping([Follower]?, ErrorMessage?) -> Void){
         let endpoint = baseUrl + "users/\(username)/followers?per_page=100&page=\(page)"
         
         guard let url = URL(string: endpoint) else {
-            complated(nil, "This username created in invalid request. Please try again.")
+            complated(nil, .invalidUsername)
             return
         }
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let _ = error {
-                complated(nil, "Unable to complate your request. Please check your internet connection.")
+                complated(nil, .unableToComplate)
                 return
             }
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                complated(nil, "Invalid response from the server. Please try again.")
+                complated(nil, .invalidResponse)
                 return
             }
             
             guard let data = data else {
-                complated(nil, "The data received from the server was invalid. Please try again.")
+                complated(nil, .invalidData)
                 return
             }
             
@@ -44,7 +44,7 @@ class NetworkManager {
                 let followers = try decoder.decode([Follower].self, from: data)
                 complated(followers, nil)
             } catch {
-                complated(nil, "The data received from the server was invalid. Please try again.")
+                complated(nil, .invalidData)
             }
         }
         
