@@ -21,10 +21,10 @@ final class SearchViewController: UIViewController {
         view.backgroundColor = .systemBackground
         configure()
     }
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     private func configure(){

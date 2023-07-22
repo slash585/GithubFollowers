@@ -15,8 +15,12 @@ final class FollowerViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .systemBackground
-        navigationController?.isNavigationBarHidden = true
         navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
 }
