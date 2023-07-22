@@ -24,6 +24,8 @@
 		56211DAD2A6B3B76001EB769 /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211DAC2A6B3B76001EB769 /* GFBodyLabel.swift */; };
 		56211DAF2A6B3C37001EB769 /* GFAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211DAE2A6B3C37001EB769 /* GFAlertViewController.swift */; };
 		56211DB12A6B4251001EB769 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211DB02A6B4251001EB769 /* UIViewController+Extension.swift */; };
+		56211DB82A6BDD37001EB769 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211DB72A6BDD37001EB769 /* User.swift */; };
+		56211DBA2A6BDDCE001EB769 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211DB92A6BDDCE001EB769 /* Follower.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		56211DAC2A6B3B76001EB769 /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		56211DAE2A6B3C37001EB769 /* GFAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertViewController.swift; sourceTree = "<group>"; };
 		56211DB02A6B4251001EB769 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		56211DB72A6BDD37001EB769 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		56211DB92A6BDDCE001EB769 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		56211D6F2A6B146D001EB769 /* Github Followers */ = {
 			isa = PBXGroup;
 			children = (
+				56211DB62A6BDD29001EB769 /* Model */,
 				56211DB52A6B4774001EB769 /* Support */,
 				56211DB42A6B4744001EB769 /* Extensions */,
 				56211DB32A6B472C001EB769 /* Custom Views */,
@@ -181,6 +186,15 @@
 				56211D7B2A6B146E001EB769 /* LaunchScreen.storyboard */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		56211DB62A6BDD29001EB769 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56211DB72A6BDD37001EB769 /* User.swift */,
+				56211DB92A6BDDCE001EB769 /* Follower.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +327,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56211DB82A6BDD37001EB769 /* User.swift in Sources */,
+				56211DBA2A6BDDCE001EB769 /* Follower.swift in Sources */,
 				56211DB12A6B4251001EB769 /* UIViewController+Extension.swift in Sources */,
 				56211DA92A6B3318001EB769 /* FollowerViewController.swift in Sources */,
 				56211D752A6B146D001EB769 /* ViewController.swift in Sources */,
