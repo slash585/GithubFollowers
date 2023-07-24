@@ -32,6 +32,7 @@
 		56211DC52A6C3586001EB769 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211DC42A6C3586001EB769 /* GFAvatarImageView.swift */; };
 		56211DC72A6CABF0001EB769 /* UIHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211DC62A6CABF0001EB769 /* UIHelpers.swift */; };
 		56211DC92A6DC28D001EB769 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211DC82A6DC28C001EB769 /* GFEmptyStateView.swift */; };
+		56211DCB2A6EF4F7001EB769 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211DCA2A6EF4F7001EB769 /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		56211DC42A6C3586001EB769 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		56211DC62A6CABF0001EB769 /* UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelpers.swift; sourceTree = "<group>"; };
 		56211DC82A6DC28C001EB769 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
+		56211DCA2A6EF4F7001EB769 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				56211DA02A6B18D2001EB769 /* SearchViewController.swift */,
 				56211DA22A6B1904001EB769 /* FavoritesViewController.swift */,
 				56211DA82A6B3318001EB769 /* FollowerViewController.swift */,
+				56211DCA2A6EF4F7001EB769 /* UserInfoViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56211DB82A6BDD37001EB769 /* User.swift in Sources */,
+				56211DCB2A6EF4F7001EB769 /* UserInfoViewController.swift in Sources */,
 				56211DBA2A6BDDCE001EB769 /* Follower.swift in Sources */,
 				56211DC92A6DC28D001EB769 /* GFEmptyStateView.swift in Sources */,
 				56211DB12A6B4251001EB769 /* UIViewController+Extension.swift in Sources */,

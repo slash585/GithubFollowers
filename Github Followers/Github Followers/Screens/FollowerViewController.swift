@@ -18,6 +18,7 @@ final class FollowerViewController: UIViewController {
     private var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
     private var page: Int = 1
     private var hasMoreFollowers = true
+    private var isSearcing = false
     
     
     var followers: [Follower] = []
@@ -123,17 +124,27 @@ extension FollowerViewController: UICollectionViewDelegate {
             getFollowers(username: username, page: page)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let activeArray = isSearcing ? filteredFollowers : followers
+        let follower = activeArray[indexPath.item]
+        let destVC = UserInfoViewController()
+        destVC.username = follower.login
+        let navController = UINavigationController(rootViewController: destVC)
+        present(navController, animated: true)
+    }
 }
 
 extension FollowerViewController: UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
         guard let filter = searchController.searchBar.text, !filter.isEmpty else { return }
-        
+        isSearcing = true
         filteredFollowers = followers.filter{ $0.login.lowercased().contains(filter.lowercased()) }
         updateData(on: filteredFollowers)
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        isSearcing = false
         updateData(on: followers)
     }
 }
