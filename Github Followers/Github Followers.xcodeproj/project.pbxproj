@@ -40,6 +40,8 @@
 		56211DD82A6F2582001EB769 /* GFItemInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211DD72A6F2582001EB769 /* GFItemInfoViewController.swift */; };
 		56211DDA2A6F2E27001EB769 /* GFRepoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211DD92A6F2E27001EB769 /* GFRepoItemViewController.swift */; };
 		56211DDC2A706665001EB769 /* GFFollowerItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211DDB2A706665001EB769 /* GFFollowerItemsViewController.swift */; };
+		56211DDF2A706DF5001EB769 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211DDE2A706DF5001EB769 /* String+Extensions.swift */; };
+		56211DE12A706EA4001EB769 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211DE02A706EA4001EB769 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		56211DD72A6F2582001EB769 /* GFItemInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoViewController.swift; sourceTree = "<group>"; };
 		56211DD92A6F2E27001EB769 /* GFRepoItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFRepoItemViewController.swift; sourceTree = "<group>"; };
 		56211DDB2A706665001EB769 /* GFFollowerItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemsViewController.swift; sourceTree = "<group>"; };
+		56211DDE2A706DF5001EB769 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		56211DE02A706EA4001EB769 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				56211DB02A6B4251001EB769 /* UIViewController+Extension.swift */,
+				56211DDE2A706DF5001EB769 /* String+Extensions.swift */,
+				56211DE02A706EA4001EB769 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -448,7 +454,9 @@
 				56211DBD2A6BE02C001EB769 /* NetworkManager.swift in Sources */,
 				56211DD82A6F2582001EB769 /* GFItemInfoViewController.swift in Sources */,
 				56211DA72A6B23F1001EB769 /* GFTextField.swift in Sources */,
+				56211DE12A706EA4001EB769 /* Date+Extensions.swift in Sources */,
 				56211DAD2A6B3B76001EB769 /* GFBodyLabel.swift in Sources */,
+				56211DDF2A706DF5001EB769 /* String+Extensions.swift in Sources */,
 				56211DD62A6F174E001EB769 /* GFItemInfoView.swift in Sources */,
 				56211DCE2A6F0424001EB769 /* GFUserInfoHeaderViewController.swift in Sources */,
 				56211DDC2A706665001EB769 /* GFFollowerItemsViewController.swift in Sources */,
