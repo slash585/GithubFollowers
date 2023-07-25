@@ -33,6 +33,8 @@ final class UserInfoViewController: UIViewController {
                 DispatchQueue.main.async {
                     print("DEBUG: user is \(user)")
                     self.add(childVC: GFUserInfoHeaderViewController(user: user), to: self.headerView)
+                    self.add(childVC: GFRepoItemViewController(user: user), to: self.itemViewOne)
+                    self.add(childVC: GFFollowerItemsViewController(user: user), to: self.itemViewTwo)
                 }
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
@@ -79,7 +81,7 @@ final class UserInfoViewController: UIViewController {
         ])
     }
     
-    private func add(childVC: UIViewController, to containerView: UIView){
+    func add(childVC: UIViewController, to containerView: UIView) {
         addChild(childVC)
         containerView.addSubview(childVC.view)
         childVC.view.frame = containerView.bounds
