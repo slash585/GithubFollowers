@@ -83,7 +83,7 @@ class GFAlertViewController: UIViewController {
             actionButton.heightAnchor.constraint(equalToConstant: 44)
         ])
         
-        actionButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
+        actionButton.addTarget(self, action: #selector(dismissAlertVC), for: .touchUpInside)
     }
     
     private func configureBodyLabel(){
@@ -98,7 +98,7 @@ class GFAlertViewController: UIViewController {
         ])
     }
     
-    @objc private func dismissVC(){
+    @objc private func dismissAlertVC(){
         dismiss(animated: true)
     }
 
