@@ -7,18 +7,21 @@
 
 import UIKit
 
+protocol SearchViewControllerProtocol: AnyObject {
+    func pushVC(username: String)
+    func showAlertView()
+}
+
 final class SearchViewController: UIViewController {
     
     private lazy var logoImageView = UIImageView()
     private lazy var usernameTextField = GFTextField()
     private lazy var callToActionButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
     
-    private var isUsernameEntered: Bool { return !usernameTextField.text!.isEmpty }
-
+    private lazy var viewModel = SearchViewModel(view: self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .systemBackground
         configure()
     }
         
@@ -28,6 +31,8 @@ final class SearchViewController: UIViewController {
     }
     
     private func configure(){
+        view.backgroundColor = .systemBackground
+
         configureLogoImageView()
         configureTextField()
         configureCallToActionButton()
@@ -64,7 +69,7 @@ final class SearchViewController: UIViewController {
     private func configureCallToActionButton(){
         view.addSubview(callToActionButton)
         
-        callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
+        callToActionButton.addTarget(self, action: #selector(handleTappedCallToActionButton), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
@@ -80,15 +85,9 @@ final class SearchViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
         
-    @objc private func pushFollowerListVC(){
-        guard isUsernameEntered else {
-            presentGFAlertOnMainThread(title: "Empty Username", message: "Please enter a username. We need to know who to look for you", buttonTitle: "Ok")
-            return
-        }
-        let followerListVC = FollowerViewController()
-        followerListVC.username = usernameTextField.text
-        followerListVC.title = usernameTextField.text
-        navigationController?.pushViewController(followerListVC, animated: true)
+    @objc private func handleTappedCallToActionButton(){
+        guard let username = usernameTextField.text else { return }
+        viewModel.sendUsername(username: username)
     }
     
 }
@@ -97,5 +96,18 @@ extension SearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print("Did tap return")
         return true
+    }
+}
+
+extension SearchViewController: SearchViewControllerProtocol {
+    func showAlertView() {
+        presentGFAlertOnMainThread(title: "Empty Username", message: "Please enter a username. We need to know who to look for you", buttonTitle: "Ok")
+    }
+    
+    func pushVC(username: String) {
+        let followerListVC = FollowerViewController()
+        followerListVC.username = username
+        followerListVC.title = username
+        navigationController?.pushViewController(followerListVC, animated: true)
     }
 }

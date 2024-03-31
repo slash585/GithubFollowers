@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56188F3D2BB905A200E7A14B /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56188F3C2BB905A200E7A14B /* SearchViewModel.swift */; };
 		56211D712A6B146D001EB769 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211D702A6B146D001EB769 /* AppDelegate.swift */; };
 		56211D732A6B146D001EB769 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211D722A6B146D001EB769 /* SceneDelegate.swift */; };
 		56211D752A6B146D001EB769 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56211D742A6B146D001EB769 /* ViewController.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56188F3C2BB905A200E7A14B /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		56211D6D2A6B146D001EB769 /* Github Followers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Followers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56211D702A6B146D001EB769 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56211D722A6B146D001EB769 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +134,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56188F3B2BB9058D00E7A14B /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				56211DA02A6B18D2001EB769 /* SearchViewController.swift */,
+				56188F3C2BB905A200E7A14B /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		56211D642A6B146D001EB769 = {
 			isa = PBXGroup;
 			children = (
@@ -187,7 +198,7 @@
 		56211DB22A6B470A001EB769 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				56211DA02A6B18D2001EB769 /* SearchViewController.swift */,
+				56188F3B2BB9058D00E7A14B /* Search */,
 				56211DA22A6B1904001EB769 /* FavoritesViewController.swift */,
 				56211DA82A6B3318001EB769 /* FollowerViewController.swift */,
 				56211DCA2A6EF4F7001EB769 /* UserInfoViewController.swift */,
@@ -437,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56188F3D2BB905A200E7A14B /* SearchViewModel.swift in Sources */,
 				56211DB82A6BDD37001EB769 /* User.swift in Sources */,
 				56211DCB2A6EF4F7001EB769 /* UserInfoViewController.swift in Sources */,
 				56211DBA2A6BDDCE001EB769 /* Follower.swift in Sources */,
@@ -640,6 +652,7 @@
 				DEVELOPMENT_TEAM = SJ9HXADZ9T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Github Followers/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -654,6 +667,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -670,6 +684,7 @@
 				DEVELOPMENT_TEAM = SJ9HXADZ9T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Github Followers/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -684,6 +699,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
