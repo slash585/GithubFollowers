@@ -10,13 +10,16 @@ import Foundation
 protocol FollowerListViewModelProtocol {
     var delegate: FollowerListViewModelDelegate? { get set }
     var username: String? { get set }
+    var page: Int { get set }
     
     func viewDidLoad()
+    func increasePage()
 }
 
 enum FollowerListViewModelOutput {
     case setLoading(Bool)
-    case showMovieList([Follower])
+    case showFollowerList([Follower])
+    case updateFollowerList([Follower])
 }
 
 protocol FollowerListViewModelDelegate: AnyObject {

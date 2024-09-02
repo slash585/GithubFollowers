@@ -60,15 +60,28 @@ extension FollowerListViewController: FollowerListViewModelDelegate {
         switch output {
         case .setLoading(let isLoading):
             print(isLoading)
-        case .showMovieList(let followerList):
+        case .showFollowerList(let followerList):
             followers = followerList
+            collectionView.reloadData()
+        case .updateFollowerList(let updatedFollowerList):
+            updatedFollowerList.forEach { follower in
+                followers.append(follower)
+            }
             collectionView.reloadData()
         }
     }
 }
 
 extension FollowerListViewController: UICollectionViewDelegate {
-    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+        if offsetY > contentHeight - height {
+            viewModel.increasePage()
+        }
+    }
 }
 
 extension FollowerListViewController: UICollectionViewDataSource {

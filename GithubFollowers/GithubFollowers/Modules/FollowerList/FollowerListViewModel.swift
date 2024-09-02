@@ -12,6 +12,8 @@ final class FollowerListViewModel: FollowerListViewModelProtocol {
     
     var username: String?
     
+    var page: Int = 1
+    
     private let service: NetworkServiceProtocol
     
     init(service: NetworkServiceProtocol, username: String) {
@@ -20,16 +22,21 @@ final class FollowerListViewModel: FollowerListViewModelProtocol {
     }
     
     func viewDidLoad() {
-        fetchFollowers()
+        fetchFollowers(isUpdated: false)
+    }
+    
+    func increasePage() {
+        page += 1
+        fetchFollowers(isUpdated: true)
     }
 }
 
 extension FollowerListViewModel {
-    private func fetchFollowers(){
+    private func fetchFollowers(isUpdated: Bool){
         
         notify(.setLoading(true))
         
-        let endpoint = Endpoint.getFollowers(username: self.username ?? "", perPage: 100, page: 1)
+        let endpoint = Endpoint.getFollowers(username: self.username ?? "", perPage: 15, page: self.page)
         service.request(endpoint) { [weak self] (result: (Result<[Follower], Error>)) in
             
             guard let self else { return }
@@ -37,7 +44,11 @@ extension FollowerListViewModel {
             switch result {
             case .success(let data):
                 DispatchQueue.main.async {
-                    self.notify(.showMovieList(data))
+                    if !isUpdated {
+                        self.notify(.showFollowerList(data))
+                    } else {
+                        self.notify(.updateFollowerList(data))
+                    }
                 }
             case .failure(let error):
                 print(error)
