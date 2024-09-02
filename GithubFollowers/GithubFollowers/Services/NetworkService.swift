@@ -13,9 +13,7 @@ protocol NetworkServiceProtocol {
 
 final class NetworkService: NetworkServiceProtocol {
     static let shared = NetworkService()
-    
-    private init() { }
-    
+        
     func request<T: Codable>(_ endpoint: Endpoint, completion: @escaping (Result<T, Error>) -> Void) {
         URLSession.shared.dataTask(with: endpoint.request()) { data, response, error in
             if let error = error {

@@ -20,6 +20,8 @@
 		566B0B1D2C861BA300C9C26D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B0B1C2C861BA300C9C26D /* NetworkService.swift */; };
 		566B0B202C861E0500C9C26D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B0B1F2C861E0500C9C26D /* User.swift */; };
 		566B0B222C861E1700C9C26D /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B0B212C861E1700C9C26D /* Follower.swift */; };
+		566B0B242C86259000C9C26D /* SearchContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B0B232C86259000C9C26D /* SearchContracts.swift */; };
+		566B0B262C86269900C9C26D /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B0B252C86269900C9C26D /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		566B0B1C2C861BA300C9C26D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		566B0B1F2C861E0500C9C26D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		566B0B212C861E1700C9C26D /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		566B0B232C86259000C9C26D /* SearchContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContracts.swift; sourceTree = "<group>"; };
+		566B0B252C86269900C9C26D /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,8 @@
 			children = (
 				566B0AE32C8612D500C9C26D /* SearchViewController.swift */,
 				566B0B132C86136F00C9C26D /* SearchBuilder.swift */,
+				566B0B232C86259000C9C26D /* SearchContracts.swift */,
+				566B0B252C86269900C9C26D /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -321,7 +327,9 @@
 				566B0AE02C8612D500C9C26D /* AppDelegate.swift in Sources */,
 				566B0AE22C8612D500C9C26D /* SceneDelegate.swift in Sources */,
 				566B0B222C861E1700C9C26D /* Follower.swift in Sources */,
+				566B0B242C86259000C9C26D /* SearchContracts.swift in Sources */,
 				566B0B142C86136F00C9C26D /* SearchBuilder.swift in Sources */,
+				566B0B262C86269900C9C26D /* SearchViewModel.swift in Sources */,
 				566B0B1D2C861BA300C9C26D /* NetworkService.swift in Sources */,
 				566B0B1B2C86177C00C9C26D /* Endpoint.swift in Sources */,
 				566B0B202C861E0500C9C26D /* User.swift in Sources */,
