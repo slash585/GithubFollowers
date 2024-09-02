@@ -13,7 +13,7 @@ protocol SearchViewModelProtocol {
 }
 
 enum SearchRoute {
-    // - TODO: to be implemented
+    case followerList(username: String)
 }
 
 protocol SearchViewModelDelegate: AnyObject {

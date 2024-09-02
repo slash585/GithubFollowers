@@ -9,16 +9,8 @@ import Foundation
 
 final class SearchViewModel: SearchViewModelProtocol {
     var delegate: SearchViewModelDelegate?
-    
-    private let service: NetworkServiceProtocol
-    
-    init(service: NetworkServiceProtocol) {
-        self.service = NetworkService.shared
-    }
-    
-    func fetchUserFollowers(username: String) {
         
+    func fetchUserFollowers(username: String) {
+        delegate?.navigate(to: .followerList(username: username))
     }
-    
-    
 }
