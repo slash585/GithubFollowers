@@ -6,14 +6,27 @@
 //
 
 import UIKit
+import SnapKit
 
 final class FollowerListViewController: UIViewController {
     
     var viewModel: FollowerListViewModelProtocol
     
+    private var followers: [Follower] = []
+    
+    private lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelpers.createThreeColumnFlowLayout(in: view))
+        collectionView.backgroundColor = .systemBackground
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
+        return collectionView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(viewModel.username)
+        viewModel.viewDidLoad()
+        configureUI()
     }
     
     init(viewModel: FollowerListViewModelProtocol) {
@@ -28,6 +41,44 @@ final class FollowerListViewController: UIViewController {
     }
 }
 
-extension FollowerListViewController: FollowerListViewModelDelegate {
+extension FollowerListViewController {
+    private func configureUI(){
+        makeCollectionView()
+    }
     
+    private func makeCollectionView() {
+        view.addSubview(collectionView)
+        
+        collectionView.snp.makeConstraints { make in
+            make.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+    }
+}
+
+extension FollowerListViewController: FollowerListViewModelDelegate {
+    func handleViewModelOutput(_ output: FollowerListViewModelOutput) {
+        switch output {
+        case .setLoading(let isLoading):
+            print(isLoading)
+        case .showMovieList(let followerList):
+            followers = followerList
+            collectionView.reloadData()
+        }
+    }
+}
+
+extension FollowerListViewController: UICollectionViewDelegate {
+    
+}
+
+extension FollowerListViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return followers.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseID, for: indexPath) as! FollowerCell
+        cell.set(follower: followers[indexPath.item])
+        return cell
+    }
 }
