@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56501C9E2C863EAA00E8740D /* FollowerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56501C9D2C863EAA00E8740D /* FollowerListViewController.swift */; };
+		56501CA02C863ED000E8740D /* FollowerListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56501C9F2C863ED000E8740D /* FollowerListBuilder.swift */; };
+		56501CA22C863F1200E8740D /* FollowerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56501CA12C863F1200E8740D /* FollowerListViewModel.swift */; };
+		56501CA42C863F2700E8740D /* FollowerListContructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56501CA32C863F2700E8740D /* FollowerListContructor.swift */; };
 		566B0AE02C8612D500C9C26D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B0ADF2C8612D500C9C26D /* AppDelegate.swift */; };
 		566B0AE22C8612D500C9C26D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B0AE12C8612D500C9C26D /* SceneDelegate.swift */; };
 		566B0AE42C8612D500C9C26D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B0AE32C8612D500C9C26D /* SearchViewController.swift */; };
@@ -44,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56501C9D2C863EAA00E8740D /* FollowerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewController.swift; sourceTree = "<group>"; };
+		56501C9F2C863ED000E8740D /* FollowerListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListBuilder.swift; sourceTree = "<group>"; };
+		56501CA12C863F1200E8740D /* FollowerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewModel.swift; sourceTree = "<group>"; };
+		56501CA32C863F2700E8740D /* FollowerListContructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListContructor.swift; sourceTree = "<group>"; };
 		566B0ADC2C8612D500C9C26D /* GithubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		566B0ADF2C8612D500C9C26D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		566B0AE12C8612D500C9C26D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +100,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56501C9C2C863E9400E8740D /* FollowerList */ = {
+			isa = PBXGroup;
+			children = (
+				56501C9D2C863EAA00E8740D /* FollowerListViewController.swift */,
+				56501C9F2C863ED000E8740D /* FollowerListBuilder.swift */,
+				56501CA12C863F1200E8740D /* FollowerListViewModel.swift */,
+				56501CA32C863F2700E8740D /* FollowerListContructor.swift */,
+			);
+			path = FollowerList;
+			sourceTree = "<group>";
+		};
 		566B0AD32C8612D500C9C26D = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +182,7 @@
 		566B0B112C86132400C9C26D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				56501C9C2C863E9400E8740D /* FollowerList */,
 				566B0B122C86134200C9C26D /* Search */,
 			);
 			path = Modules;
@@ -335,11 +355,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				566B0AE42C8612D500C9C26D /* SearchViewController.swift in Sources */,
+				56501CA02C863ED000E8740D /* FollowerListBuilder.swift in Sources */,
 				566B0AE02C8612D500C9C26D /* AppDelegate.swift in Sources */,
 				566B0AE22C8612D500C9C26D /* SceneDelegate.swift in Sources */,
+				56501C9E2C863EAA00E8740D /* FollowerListViewController.swift in Sources */,
 				566B0B222C861E1700C9C26D /* Follower.swift in Sources */,
+				56501CA42C863F2700E8740D /* FollowerListContructor.swift in Sources */,
 				566B0B242C86259000C9C26D /* SearchContracts.swift in Sources */,
 				566B0B142C86136F00C9C26D /* SearchBuilder.swift in Sources */,
+				56501CA22C863F1200E8740D /* FollowerListViewModel.swift in Sources */,
 				566B0B262C86269900C9C26D /* SearchViewModel.swift in Sources */,
 				566B0B1D2C861BA300C9C26D /* NetworkService.swift in Sources */,
 				566B0B1B2C86177C00C9C26D /* Endpoint.swift in Sources */,

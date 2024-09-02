@@ -92,7 +92,8 @@ extension SearchViewController: SearchViewModelDelegate {
     func navigate(to route: SearchRoute) {
         switch route {
         case .followerList(let username):
-            print(username)
+            let viewController = FollowerListBuilder.make(username: username)
+            show(viewController, sender: nil)
         }
     }
 }
