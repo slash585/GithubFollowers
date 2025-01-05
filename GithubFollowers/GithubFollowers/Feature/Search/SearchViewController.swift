@@ -7,9 +7,17 @@
 
 import UIKit
 
+protocol SearchViewControllerProtocol: AnyObject { }
+
 final class SearchViewController: UIViewController {
+    
+    var viewModel: SearchViewModelProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel?.viewDidLoad()
     }
 }
+
+extension SearchViewController: SearchViewControllerProtocol {}
 

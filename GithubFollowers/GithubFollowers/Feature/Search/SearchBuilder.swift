@@ -10,6 +10,8 @@ import Foundation
 final class SearchBuilder {
     static func make() -> SearchViewController {
         let vc = SearchViewController()
+        let viewModel: SearchViewModelProtocol = SearchViewModel(view: vc)
+        vc.viewModel = viewModel
         vc.title = "Search"
         vc.view.backgroundColor = .white
         return vc

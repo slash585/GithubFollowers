@@ -13,6 +13,7 @@
 		5690ABA82D2AFAC2005EB5FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5690ABA72D2AFAC2005EB5FD /* Assets.xcassets */; };
 		5690ABAB2D2AFAC2005EB5FD /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 5690ABAA2D2AFAC2005EB5FD /* Base */; };
 		5690ABBA2D2AFBE6005EB5FD /* SearchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690ABB92D2AFBE6005EB5FD /* SearchBuilder.swift */; };
+		5690ABBC2D2AFD0C005EB5FD /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690ABBB2D2AFD0C005EB5FD /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5690ABAA2D2AFAC2005EB5FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5690ABAC2D2AFAC2005EB5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5690ABB92D2AFBE6005EB5FD /* SearchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuilder.swift; sourceTree = "<group>"; };
+		5690ABBB2D2AFD0C005EB5FD /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +58,9 @@
 		5690AB9D2D2AFAC1005EB5FD /* GithubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				5690ABB22D2AFAD9005EB5FD /* Delegate */,
 				5690ABB42D2AFAF3005EB5FD /* Feature */,
 				5690ABB32D2AFAE6005EB5FD /* Resource */,
-				5690ABB22D2AFAD9005EB5FD /* Delegate */,
 			);
 			path = GithubFollowers;
 			sourceTree = "<group>";
@@ -95,6 +97,7 @@
 			children = (
 				5690ABA22D2AFAC1005EB5FD /* SearchViewController.swift */,
 				5690ABB92D2AFBE6005EB5FD /* SearchBuilder.swift */,
+				5690ABBB2D2AFD0C005EB5FD /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5690ABA32D2AFAC1005EB5FD /* SearchViewController.swift in Sources */,
+				5690ABBC2D2AFD0C005EB5FD /* SearchViewModel.swift in Sources */,
 				5690AB9F2D2AFAC1005EB5FD /* AppDelegate.swift in Sources */,
 				5690ABA12D2AFAC1005EB5FD /* SceneDelegate.swift in Sources */,
 				5690ABBA2D2AFBE6005EB5FD /* SearchBuilder.swift in Sources */,
