@@ -7,18 +7,12 @@
 
 import Foundation
 
-protocol SearchViewModelProtocol {
-    func viewDidLoad()
-}
+protocol SearchViewModelProtocol { }
 
 final class SearchViewModel: SearchViewModelProtocol {
     private weak var view: SearchViewControllerProtocol?
     
     init(view: SearchViewControllerProtocol?) {
         self.view = view
-    }
-    
-    func viewDidLoad() {
-        print("test")
     }
 }

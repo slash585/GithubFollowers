@@ -17,6 +17,8 @@
 		5690ABBF2D358BEC005EB5FD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5690ABBE2D358BEC005EB5FD /* SnapKit */; };
 		5690ABC12D358BEC005EB5FD /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 5690ABC02D358BEC005EB5FD /* SnapKit-Dynamic */; };
 		5690ABC42D358C02005EB5FD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5690ABC32D358C02005EB5FD /* Kingfisher */; };
+		5690ABC72D358C7F005EB5FD /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690ABC62D358C7F005EB5FD /* GFTextField.swift */; };
+		5690ABC92D359011005EB5FD /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690ABC82D359011005EB5FD /* GFButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		5690ABAC2D2AFAC2005EB5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5690ABB92D2AFBE6005EB5FD /* SearchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuilder.swift; sourceTree = "<group>"; };
 		5690ABBB2D2AFD0C005EB5FD /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		5690ABC62D358C7F005EB5FD /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		5690ABC82D359011005EB5FD /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		5690AB9D2D2AFAC1005EB5FD /* GithubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				5690ABC52D358C3A005EB5FD /* View */,
 				5690ABB22D2AFAD9005EB5FD /* Delegate */,
 				5690ABB42D2AFAF3005EB5FD /* Feature */,
 				5690ABB32D2AFAE6005EB5FD /* Resource */,
@@ -106,6 +111,15 @@
 				5690ABBB2D2AFD0C005EB5FD /* SearchViewModel.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		5690ABC52D358C3A005EB5FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5690ABC62D358C7F005EB5FD /* GFTextField.swift */,
+				5690ABC82D359011005EB5FD /* GFButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,8 +201,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5690ABC72D358C7F005EB5FD /* GFTextField.swift in Sources */,
 				5690ABA32D2AFAC1005EB5FD /* SearchViewController.swift in Sources */,
 				5690ABBC2D2AFD0C005EB5FD /* SearchViewModel.swift in Sources */,
+				5690ABC92D359011005EB5FD /* GFButton.swift in Sources */,
 				5690AB9F2D2AFAC1005EB5FD /* AppDelegate.swift in Sources */,
 				5690ABA12D2AFAC1005EB5FD /* SceneDelegate.swift in Sources */,
 				5690ABBA2D2AFBE6005EB5FD /* SearchBuilder.swift in Sources */,
