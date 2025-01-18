@@ -12,7 +12,11 @@ protocol SearchViewModelProtocol { }
 final class SearchViewModel: SearchViewModelProtocol {
     private weak var view: SearchViewControllerProtocol?
     
-    init(view: SearchViewControllerProtocol?) {
+    private let service: NetworkManagerProtocol?
+    
+    init(view: SearchViewControllerProtocol?, service: NetworkManagerProtocol?) {
         self.view = view
+        self.service = service
     }
 }
+

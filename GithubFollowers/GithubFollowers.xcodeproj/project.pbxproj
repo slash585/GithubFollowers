@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		566F43662D384F8900F08E5A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566F43652D384F8900F08E5A /* User.swift */; };
+		566F43682D384FEB00F08E5A /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566F43672D384FEB00F08E5A /* Follower.swift */; };
 		5690AB9F2D2AFAC1005EB5FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690AB9E2D2AFAC1005EB5FD /* AppDelegate.swift */; };
 		5690ABA12D2AFAC1005EB5FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690ABA02D2AFAC1005EB5FD /* SceneDelegate.swift */; };
 		5690ABA32D2AFAC1005EB5FD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690ABA22D2AFAC1005EB5FD /* SearchViewController.swift */; };
@@ -19,9 +21,13 @@
 		5690ABC42D358C02005EB5FD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5690ABC32D358C02005EB5FD /* Kingfisher */; };
 		5690ABC72D358C7F005EB5FD /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690ABC62D358C7F005EB5FD /* GFTextField.swift */; };
 		5690ABC92D359011005EB5FD /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690ABC82D359011005EB5FD /* GFButton.swift */; };
+		5690ABCD2D359421005EB5FD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690ABCC2D359421005EB5FD /* NetworkManager.swift */; };
+		5690ABCF2D3594B5005EB5FD /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690ABCE2D3594B5005EB5FD /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		566F43652D384F8900F08E5A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		566F43672D384FEB00F08E5A /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		5690AB9B2D2AFAC1005EB5FD /* GithubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5690AB9E2D2AFAC1005EB5FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5690ABA02D2AFAC1005EB5FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +39,8 @@
 		5690ABBB2D2AFD0C005EB5FD /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		5690ABC62D358C7F005EB5FD /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
 		5690ABC82D359011005EB5FD /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
+		5690ABCC2D359421005EB5FD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5690ABCE2D3594B5005EB5FD /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		566F43642D384F7300F08E5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				566F43652D384F8900F08E5A /* User.swift */,
+				566F43672D384FEB00F08E5A /* Follower.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5690AB922D2AFAC1005EB5FD = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +85,8 @@
 		5690AB9D2D2AFAC1005EB5FD /* GithubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				566F43642D384F7300F08E5A /* Model */,
+				5690ABCA2D35940B005EB5FD /* Manager */,
 				5690ABC52D358C3A005EB5FD /* View */,
 				5690ABB22D2AFAD9005EB5FD /* Delegate */,
 				5690ABB42D2AFAF3005EB5FD /* Feature */,
@@ -120,6 +139,23 @@
 				5690ABC82D359011005EB5FD /* GFButton.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5690ABCA2D35940B005EB5FD /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				5690ABCB2D359412005EB5FD /* Network */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		5690ABCB2D359412005EB5FD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5690ABCE2D3594B5005EB5FD /* Endpoint.swift */,
+				5690ABCC2D359421005EB5FD /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,11 +238,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5690ABC72D358C7F005EB5FD /* GFTextField.swift in Sources */,
+				5690ABCF2D3594B5005EB5FD /* Endpoint.swift in Sources */,
 				5690ABA32D2AFAC1005EB5FD /* SearchViewController.swift in Sources */,
 				5690ABBC2D2AFD0C005EB5FD /* SearchViewModel.swift in Sources */,
 				5690ABC92D359011005EB5FD /* GFButton.swift in Sources */,
+				5690ABCD2D359421005EB5FD /* NetworkManager.swift in Sources */,
 				5690AB9F2D2AFAC1005EB5FD /* AppDelegate.swift in Sources */,
 				5690ABA12D2AFAC1005EB5FD /* SceneDelegate.swift in Sources */,
+				566F43682D384FEB00F08E5A /* Follower.swift in Sources */,
+				566F43662D384F8900F08E5A /* User.swift in Sources */,
 				5690ABBA2D2AFBE6005EB5FD /* SearchBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
