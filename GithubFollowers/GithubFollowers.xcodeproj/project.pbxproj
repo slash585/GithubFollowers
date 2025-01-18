@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560F98412D3BAD90006E69F4 /* FollowerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560F98402D3BAD90006E69F4 /* FollowerListViewController.swift */; };
+		560F98432D3BADAD006E69F4 /* FollowerListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560F98422D3BADAD006E69F4 /* FollowerListBuilder.swift */; };
 		566F43662D384F8900F08E5A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566F43652D384F8900F08E5A /* User.swift */; };
 		566F43682D384FEB00F08E5A /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566F43672D384FEB00F08E5A /* Follower.swift */; };
 		5690AB9F2D2AFAC1005EB5FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5690AB9E2D2AFAC1005EB5FD /* AppDelegate.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		560F98402D3BAD90006E69F4 /* FollowerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewController.swift; sourceTree = "<group>"; };
+		560F98422D3BADAD006E69F4 /* FollowerListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListBuilder.swift; sourceTree = "<group>"; };
 		566F43652D384F8900F08E5A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		566F43672D384FEB00F08E5A /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		5690AB9B2D2AFAC1005EB5FD /* GithubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		560F983F2D3BAD80006E69F4 /* FollowerList */ = {
+			isa = PBXGroup;
+			children = (
+				560F98402D3BAD90006E69F4 /* FollowerListViewController.swift */,
+				560F98422D3BADAD006E69F4 /* FollowerListBuilder.swift */,
+			);
+			path = FollowerList;
+			sourceTree = "<group>";
+		};
 		566F43642D384F7300F08E5A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +130,7 @@
 		5690ABB42D2AFAF3005EB5FD /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				560F983F2D3BAD80006E69F4 /* FollowerList */,
 				5690ABB82D2AFBCE005EB5FD /* Search */,
 			);
 			path = Feature;
@@ -245,6 +259,8 @@
 				5690ABCD2D359421005EB5FD /* NetworkManager.swift in Sources */,
 				5690AB9F2D2AFAC1005EB5FD /* AppDelegate.swift in Sources */,
 				5690ABA12D2AFAC1005EB5FD /* SceneDelegate.swift in Sources */,
+				560F98412D3BAD90006E69F4 /* FollowerListViewController.swift in Sources */,
+				560F98432D3BADAD006E69F4 /* FollowerListBuilder.swift in Sources */,
 				566F43682D384FEB00F08E5A /* Follower.swift in Sources */,
 				566F43662D384F8900F08E5A /* User.swift in Sources */,
 				5690ABBA2D2AFBE6005EB5FD /* SearchBuilder.swift in Sources */,

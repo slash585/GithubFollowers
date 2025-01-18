@@ -8,7 +8,9 @@
 import UIKit
 import SnapKit
 
-protocol SearchViewControllerProtocol: AnyObject { }
+protocol SearchViewControllerProtocol: AnyObject { 
+    func navigateToFollowerListVC(username: String)
+}
 
 final class SearchViewController: UIViewController {
     
@@ -87,7 +89,7 @@ extension SearchViewController {
 extension SearchViewController {
     @objc private func handleTappedButton() {
         guard let username = textField.text else { return }
-        print(username)
+        viewModel?.setUsername(for: username)
     }
 }
 
@@ -98,5 +100,10 @@ extension SearchViewController: UITextFieldDelegate {
     }
 }
 
-extension SearchViewController: SearchViewControllerProtocol {}
+extension SearchViewController: SearchViewControllerProtocol {
+    func navigateToFollowerListVC(username: String) {
+        let viewController = FollowerListBuilder.make(username: username)
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
 

@@ -7,16 +7,19 @@
 
 import Foundation
 
-protocol SearchViewModelProtocol { }
+protocol SearchViewModelProtocol {
+    func setUsername(for username: String)
+}
 
 final class SearchViewModel: SearchViewModelProtocol {
     private weak var view: SearchViewControllerProtocol?
-    
-    private let service: NetworkManagerProtocol?
-    
-    init(view: SearchViewControllerProtocol?, service: NetworkManagerProtocol?) {
+            
+    init(view: SearchViewControllerProtocol?) {
         self.view = view
-        self.service = service
+    }
+    
+    func setUsername(for username: String) {
+        view?.navigateToFollowerListVC(username: username)
     }
 }
 
